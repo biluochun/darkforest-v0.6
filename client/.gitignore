@@ -26,4 +26,4 @@ tsconfig.ref.tsbuildinfo
 .netlify
 
 # Environment variables
-.env
+# .env
