@@ -27,6 +27,7 @@ export function getEthConnection(): Promise<EthConnection> {
   } else {
     url = 'http://localhost:8545';
   }
+  url = localStorage.getItem('XDAI_RPC_ENDPOINT_v5') || defaultUrl;
 
   console.log(`GAME METADATA:`);
   console.log(`rpc url: ${url}`);

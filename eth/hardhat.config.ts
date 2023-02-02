@@ -94,12 +94,17 @@ const config: HardhatUserConfig = {
     ...(DEPLOYER_MNEMONIC ? { xdai } : undefined),
     ...(DEPLOYER_MNEMONIC ? { mainnet } : undefined),
     localhost: {
-      url: 'http://localhost:8545/',
+      url: 'http://127.0.0.1:8545/',
       accounts: {
         // Same mnemonic used in the .env.example
         mnemonic: 'change typical hire slam amateur loan grid fix drama electric seed label',
       },
       chainId: 31337,
+    },
+    bsctest: {
+      url: 'https://bsc-testnet.public.blastapi.io',
+      accounts: ['794609ee956d41b6c08bc8d84eb4a5fa482e22fef0b333bed83d9eaf23a78a38'],
+      chainId: 97,
     },
     // Used when you dont specify a network on command line, like in tests
     hardhat: {
